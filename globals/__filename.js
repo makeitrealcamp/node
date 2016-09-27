@@ -1,1 +1,1 @@
-// tu codigo va aca
+console.log(`Hola mundo desde:\n${__filename}.js`)
