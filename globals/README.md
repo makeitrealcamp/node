@@ -57,7 +57,7 @@ En caso de el usuario no pase ambos flags con sus valores, la aplicacion debe im
 
 En alrchivo `std-in-out.js` vas a encontrar un array de `questions`. Tu reto es crear una aplicacion que le haga cada una de esas preguntas al usuario y reciba su respuesta. Una vez el programa halla hecho todas las preguntas y recivido todas las respuestas este debe imprimir en la consola un string que diga:
 
-`"Ve a ${respuesta[1]} ${respuesta[0]} puedes terminar de escribir ${respuesta[2]} mas tarde}"
+`"Ve a ${respuesta[1]} ${respuesta[0]} puedes terminar de escribir ${respuesta[2]} mas tarde}"`
 
 y luego que se cierre el proceso.
 
