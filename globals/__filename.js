@@ -1,1 +1,2 @@
-console.log(`Hola mundo desde:\n${__filename}.js`)
+var path = require('path')
+console.log(path.basename(__filename))
