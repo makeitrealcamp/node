@@ -8,7 +8,8 @@ var server = http.createServer(function(req, res) {
   res.writeHead(200, {"Content-Type": "text/html"});
 
   // Aca falta que efectivamente devuelvas ese HTML con el h1
-
+  res.write('<h1>Hola mundo desde node</h1>')
+  res.end()
 
 });
 
