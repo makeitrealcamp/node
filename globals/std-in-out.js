@@ -1,5 +1,3 @@
-// // Tu codigo va aca
-//
 var questions = [
   "What is your name?",
   "What is your fav hobby?",
