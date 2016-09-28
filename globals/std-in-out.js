@@ -9,7 +9,7 @@ var questions = [
 var answers = new Array;
 
 function readAnswer(){
-  return answers;
+  return `Go to ${answers[1]} ${answers[0]}, you can end writing ${answers[2]} later`
 }
 
 function readQuestion(i){
@@ -25,19 +25,11 @@ function addAnswer(data){
 }
 
 function cliProgram(data){
-
-  if (answers.length !== questions.length ){
-    addAnswer(data)
-    console.log( readQuestion(answers.length) )
-  }
-
-  if (answers.length === questions.length){
-    process.exit()
-  }
-
+  if ( answers.length !== questions.length ) { addAnswer(data) }
+  if ( answers.length === questions.length ) { process.exit() }
+  console.log( readQuestion(answers.length) )
 }
 
-console.log( readQuestion(answers.length) )
 process.stdin.on('data', function(data){
   cliProgram(data)
 })
@@ -45,3 +37,5 @@ process.stdin.on('data', function(data){
 process.on('exit', () => {
   console.log( readAnswer() )
 });
+
+console.log( readQuestion(answers.length) )
