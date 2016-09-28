@@ -1,6 +1,6 @@
 var path = require('path')
 var fs = require('fs')
-var dirpath =  path.join( path.dirname(__filename) , 'testFiles')
+var dirpath =  path.join( path.dirname(__filename) , 'testFiles' )
 
 
 function checkIfDerectory(pathIn){
