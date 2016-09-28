@@ -1,36 +1,47 @@
-// Tu codigo va aca
-
+// // Tu codigo va aca
+//
 var questions = [
   "What is your name?",
   "What is your fav hobby?",
   "What is your preferred programming language?"
 ];
 
+var answers = new Array;
 
+function readAnswer(){
+  return answers;
+}
 
+function readQuestion(i){
+  return questions[i];
+}
 
-//var wName = process.stdout.write(questions[0]);
+function cleanInput(data){
+  return data.toString().trim()
+}
 
-var index = 0;
-function askQuestion(questionsArr){
-  process.stdout.write(questionsArr[index])
-  if (index < 2){ index+=1;}
-  console.log(index)
-  if (index === 2){
-    console.log('jajaja')
+function addAnswer(data){
+  answers.push(cleanInput(data))
+}
+
+function cliProgram(data){
+
+  if (answers.length !== questions.length ){
+    addAnswer(data)
+    console.log( readQuestion(answers.length) )
+  }
+
+  if (answers.length === questions.length){
+    process.exit()
   }
 
 }
 
-askQuestion(questions);
-
+console.log( readQuestion(answers.length) )
 process.stdin.on('data', function(data){
-  askQuestion(questions);
+  cliProgram(data)
 })
-  process.exit()
 
-
-  // var nameAnswer = data.toString().trim()
-  //  process.stdout.write(questions[1])
-  // console.log(nameAnswer);
-  //  process.exit()
+process.on('exit', () => {
+  console.log( readAnswer() )
+});
